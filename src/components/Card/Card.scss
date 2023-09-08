@@ -1,0 +1,21 @@
+.card {
+  background-color: #3c3e44;
+  display: flex;
+  height: 220px;
+  width: 600px;
+  &_image {
+    background-image: url("../../../public/1.jpg");
+    height: 220px;
+    width: 229px;
+  }
+  &_desc {
+    &_name {
+      color: #F5F5F5;
+      font-family: Roboto;
+      font-size: 27px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 29.7px; /* 110% */
+    }
+  }
+}

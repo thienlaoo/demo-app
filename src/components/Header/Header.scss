@@ -1,0 +1,33 @@
+.header {
+  &_nav {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: auto;
+  }
+
+  &_logo {
+    background-image: url("./logo.svg");
+    width: 40px;
+    height: 40px;
+    margin-left: 27px;
+  }
+
+  &_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 345px;
+    width: auto;
+    color: #202329;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 101.25px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 111.375px; /* 110% */
+  }
+}
+
+
+
