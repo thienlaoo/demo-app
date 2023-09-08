@@ -1,21 +1,78 @@
 .card {
   background-color: #3c3e44;
+
+  border-radius: 10px;
   display: flex;
   height: 220px;
   width: 600px;
+
   &_image {
+    border-radius: 10px 0 0 10px;
     background-image: url("../../../public/1.jpg");
     height: 220px;
     width: 229px;
   }
+
   &_desc {
+    padding-top: 12px;
+    padding-left: 13px;
+
     &_name {
       color: #F5F5F5;
-      font-family: Roboto;
+      font-family: Roboto, sans-serif;
       font-size: 27px;
       font-style: normal;
       font-weight: 800;
-      line-height: 29.7px; /* 110% */
+      line-height: 29.7px;
+    }
+
+    &_color {
+      width: 9px;
+      height: 9px;
+      border-radius: 4.5px;
+      background: #9E9E9E;
+      margin-right: 7px;
+    }
+
+    &_info {
+      display: flex;
+      align-items: center;
+    }
+
+    &_status {
+      color: #FFF;
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 26px; /* 162.5% */
+      text-transform: capitalize;
+    }
+
+    &_section {
+      display: flex;
+      flex-direction: column;
+      color: #F5F5F5;
+      font-family: Roboto, sans-serif;
+    }
+
+    &_text {
+      padding-top: 12px;
+      color: #9E9E9E;
+      font-family: Roboto, sans-serif;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 26px;
+    }
+
+    &_first {
+      color: #F5F5F5;
+      font-family: Roboto;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 29.25px; /* 162.5% */
     }
   }
 }
