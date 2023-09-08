@@ -1,19 +1,35 @@
-import React from 'react';
-import {Header} from "./components/Header";
-import {Footer} from "../src/components/Footer/Footer";
-import {Card} from "./components/Card/Card";
-import {MainContent} from "./components/MainContent/MainContent";
+import React, { useEffect, useState } from 'react';
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer/Footer";
+import { Cardlist } from "./components/CardList/Cardlist";
+import { MainContent } from "./components/MainContent/MainContent";
+import { fetchCharPage } from "./components/Helpers/fetchHelper";
+import { CharData } from "./components/types/CharData";
 import './App.scss';
 
 function App() {
+    const [chars, setChars] = useState<CharData[] | null>(null);
+
+    useEffect(() => {
+        fetchCharPage(1)
+            .then((data) => {
+                if (data) {
+                    setChars(data);
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+    }, []);
+
     return (
         <>
-            <Header/>
-            <MainContent/>
-            <Card/>
-            <Footer/>
+            <Header />
+            <MainContent />
+            <Cardlist chars={chars || []} />
+            <Footer />
         </>
-    )
+    );
 }
 
 export default App;
