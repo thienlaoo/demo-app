@@ -13,11 +13,9 @@ export const Pagination: React.FC<Props> = ({
                                                 onPageChange,
                                             }) => {
     const totalPages = total;
-
-    // Function to generate a list of 6 pages centered around the current page
     const generatePageList = () => {
         const pageList = [];
-        const maxVisiblePages = 6; // Number of pages to show
+        const maxVisiblePages = 8;
 
         if (totalPages <= maxVisiblePages) {
             for (let i = 1; i <= totalPages; i++) {
@@ -55,11 +53,10 @@ export const Pagination: React.FC<Props> = ({
         <ul className="pagination">
             <li>
                 <button
-                    className="pagination__page-link"
+                    className="pagination__page-link prev"
                     aria-disabled={currentPage === 1}
                     onClick={() => handlePageClick(currentPage - 1)}
                 >
-                    Previous
                 </button>
             </li>
             {generatePageList().map((page) => (
@@ -77,11 +74,10 @@ export const Pagination: React.FC<Props> = ({
             ))}
             <li>
                 <button
-                    className="pagination__page-link"
+                    className="pagination__page-link next"
                     aria-disabled={currentPage === totalPages}
                     onClick={() => handlePageClick(currentPage + 1)}
                 >
-                    Next
                 </button>
             </li>
         </ul>
