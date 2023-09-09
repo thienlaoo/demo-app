@@ -8,7 +8,6 @@
 
   &_image {
     border-radius: 10px 0 0 10px;
-    background-image: url("../../../public/1.jpg");
     height: 220px;
     width: 229px;
     background-size: 220px 229px;
@@ -32,8 +31,32 @@
       width: 9px;
       height: 9px;
       border-radius: 4.5px;
-      background: #9E9E9E;
       margin-right: 7px;
+
+      &__unknown {
+        background: #9E9E9E;
+        width: 9px;
+        height: 9px;
+        border-radius: 4.5px;
+        margin-right: 7px;
+      }
+
+      &__alive {
+        background: #5C4;
+        width: 9px;
+        height: 9px;
+        border-radius: 4.5px;
+        margin-right: 7px;
+      }
+
+      &__dead {
+        background: #D63D2E;
+        width: 9px;
+        height: 9px;
+        border-radius: 4.5px;
+        margin-right: 7px;
+      }
+
     }
 
     &_info {

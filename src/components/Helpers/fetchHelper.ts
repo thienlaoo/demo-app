@@ -10,9 +10,9 @@ export async function fetchOneChar(characterId: number): Promise<CharData[]> {
     }
 }
 
-export async function fetchCharPage(page: number): Promise<CharData[]> {
+export async function fetchCharPage(): Promise<CharData[]> {
     try {
-        const response = await axios.get(`https://rickandmortyapi.com/api/character/?page=${page}`);
+        const response = await axios.get(`https://rickandmortyapi.com/api/character`);
         return response.data.results as CharData[];
     } catch (error) {
         throw error;

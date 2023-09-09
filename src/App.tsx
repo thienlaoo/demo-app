@@ -10,17 +10,17 @@ import './App.scss';
 function App() {
     const [chars, setChars] = useState<CharData[] | null>(null);
 
-    useEffect(() => {
-        fetchCharPage(1)
-            .then((data) => {
-                if (data) {
-                    setChars(data);
-                }
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-            });
-    }, []);
+    // useEffect(() => {
+    //     fetchCharPage()
+    //         .then((data) => {
+    //             if (data) {
+    //                 setChars(data);
+    //             }
+    //         })
+    //         .catch((error) => {
+    //             console.error('Error:', error);
+    //         });
+    // }, []);
 
     return (
         <>

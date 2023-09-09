@@ -1,7 +1,12 @@
 @import "../fonts/fonts";
 
 .header {
-
+&_container {
+  height: 345px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
   &_nav {
     display: flex;
     align-items: center;
@@ -20,7 +25,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 345px;
     width: auto;
     color: #202329;
     text-align: center;
@@ -30,17 +34,22 @@
     font-weight: 900;
     line-height: 111.375px;
     z-index: 2;
+    transform: translateY(100%);
   }
+
   &_background {
-display: flex;
-    align-items: baseline;
+    display: flex;
     justify-content: center;
+    align-items: baseline;
+    transform: translateY(-33%);
+
     &_rick {
       background-image: url("../../../public/rick.svg");
       width: 213px;
       height: 344px;
       flex-shrink: 0;
       fill: #F5F5F5;
+
       &__hand {
         background-image: url("../../../public/hand.svg");
         width: 62px;
@@ -57,6 +66,7 @@ display: flex;
       flex-shrink: 0;
       fill: #F5F5F5;
       transform: translateX(-57%);
+      z-index: -1;
     }
   }
 }
