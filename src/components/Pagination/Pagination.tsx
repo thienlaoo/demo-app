@@ -65,7 +65,7 @@ export const Pagination: React.FC<Props> = ({
                     key={page}
                 >
                     <button
-                        className="pagination__page-link"
+                        className= {currentPage !== page ? ("pagination__page-link") : ("pagination__page-link__active")}
                         onClick={() => handlePageClick(page)}
                     >
                         {page}

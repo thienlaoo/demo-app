@@ -28,3 +28,9 @@ export interface CharData {
     url: string;
     created: string;
 }
+
+export type RootState = {
+    characters: {
+        chars: CharData[] | null;
+    };
+};
