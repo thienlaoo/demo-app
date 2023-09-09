@@ -15,7 +15,7 @@ export const Card:React.FC<Props> = ({char}) => {
                 <div className="card_desc_name">{name}</div>
                 <div className="card_desc_info">
                     <div className="card_desc_color"></div>
-                    <div className="card_desc_status">`${status} - ${species}`</div>
+                    <div className="card_desc_status">{`${status} - ${species}`}</div>
                 </div>
                 <div className="card_desc_section">
                     <span className="card_desc_text">Last known location:</span>

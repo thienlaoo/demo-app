@@ -1,6 +1,7 @@
 @import "../fonts/fonts";
 
 .header {
+
   &_nav {
     display: flex;
     align-items: center;
@@ -27,7 +28,36 @@
     font-size: 101.25px;
     font-style: normal;
     font-weight: 900;
-    line-height: 111.375px; /* 110% */
+    line-height: 111.375px;
+    z-index: 2;
+  }
+  &_background {
+display: flex;
+    align-items: baseline;
+    justify-content: center;
+    &_rick {
+      background-image: url("../../../public/rick.svg");
+      width: 213px;
+      height: 344px;
+      flex-shrink: 0;
+      fill: #F5F5F5;
+      &__hand {
+        background-image: url("../../../public/hand.svg");
+        width: 62px;
+        height: 105px;
+        flex-shrink: 0;
+        transform: translateX(-125%);
+      }
+    }
+
+    &_morty {
+      background-image: url("../../../public/morty.svg");
+      width: 170px;
+      height: 211px;
+      flex-shrink: 0;
+      fill: #F5F5F5;
+      transform: translateX(-57%);
+    }
   }
 }
 

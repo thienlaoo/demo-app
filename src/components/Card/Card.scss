@@ -11,11 +11,13 @@
     background-image: url("../../../public/1.jpg");
     height: 220px;
     width: 229px;
+    background-size: 220px 229px;
   }
 
   &_desc {
     padding-top: 12px;
     padding-left: 13px;
+    width: 344px;
 
     &_name {
       color: #F5F5F5;

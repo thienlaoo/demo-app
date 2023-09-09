@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 import {CharData} from "../types/CharData";
 
 export async function fetchOneChar(characterId: number): Promise<CharData[]> {
