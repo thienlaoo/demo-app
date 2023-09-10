@@ -1,39 +1,29 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Header } from './components/Header';
-import { Footer } from './components/Footer';
-import { Cardlist } from './components/CardList/Cardlist';
-import { MainContent } from './components/MainContent/MainContent';
 import { fetchCharPage } from './components/Helpers/fetchHelper';
-import {setChars} from "./components/Redux/charactersSlice";
-import {RootState} from "./components/types/CharData";
+import { setChars } from "./components/Redux/charactersSlice";
+import { RootState } from "./components/types/CharData";
+import { CharData } from "./components/types/CharData";
+import { Main } from './Pages/Main/Main';
+import { CharPage } from './Pages/Main/CharPage/CharPage';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.scss';
 
 function App() {
-    const dispatch = useDispatch();
-    const chars = useSelector((state: RootState) => state.characters.chars);
-
-    useEffect(() => {
-        if (!chars) {
-            fetchCharPage()
-                .then((data) => {
-                    if (data) {
-                        dispatch(setChars(data));
-                    }
-                })
-                .catch((error) => {
-                    console.error('Error:', error);
-                });
-        }
-    }, [dispatch, chars]);
 
     return (
-        <>
-            <Header />
-            <MainContent />
-            <Cardlist chars={chars || []} />
-            <Footer />
-        </>
+        <Router>
+            <Routes>
+            <Route path="/" element={
+                <>
+                    <Main />
+                </>
+            } />
+            <Route path="/characters/:id" element={<CharPage/>} />
+            </Routes>
+
+        </Router>
+
     );
 }
 

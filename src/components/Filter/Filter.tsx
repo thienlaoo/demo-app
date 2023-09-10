@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { Buttons } from "../Buttons/Buttons";
+import {FormData} from "../types/FormData";
 import "./Filter.scss";
 
 export const Filter = () => {
-    const { control, handleSubmit } = useForm();
-    const onSubmit = (data: Record<string, any>) => {
-        console.log(data);
+    const { control, handleSubmit, getValues } = useForm();
+    const [formData, setData] = useState<Record<string, any> | null>(null);
+
+    const onSubmit = async (data: Record<string, any>) => {
+        const updatedData = getValues();
+        console.log(updatedData);
     };
 
     const [isFilterApplied, setIsFilterApplied] = useState(false);

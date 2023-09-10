@@ -11,7 +11,10 @@ interface Props {
 
 export const Cardlist: React.FC<Props> = ({ chars }) => {
     const [currentPage, setCurrentPage] = useState(1);
-    const [perPage, setPerPage] = useState(6); // Number of characters per page
+    const [perPage, setPerPage] = useState(6);
+
+
+
 
     const handlePerPage = (option: number) => {
         setPerPage(option);

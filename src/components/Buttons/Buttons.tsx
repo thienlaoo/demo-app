@@ -5,7 +5,7 @@ import {Controller, Control, FieldValues, useForm, SubmitHandler} from "react-ho
 import { useSelector } from "react-redux";
 import {getSelectedOption} from "../Redux/selectors";
 import {InputField} from "../InputField/InputField";
-import {FormData} from "../types/FormData";
+
 
 type ButtonsProps = {
     control: Control<FieldValues>;
@@ -13,20 +13,15 @@ type ButtonsProps = {
 
 export const Buttons = ({ control }: ButtonsProps) => {
     const selectedOption = useSelector(getSelectedOption);
-    const { control: formControl, handleSubmit, getValues } = useForm<FormData>();
 
-    const onSubmit: SubmitHandler<FormData> = (data :FormData) => {
-        // Обработка данных формы при отправке
-        console.log(data + '123');
-    };
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
         <div className="buttons_wrapper">
             <Dropdown/>
             {!selectedOption && (
                 <Controller
                     name="keywords"
                     control={control}
+                    defaultValue=""
                     render={({ field }: { field: any }) => (
                         <input
                             className="buttons_input"
@@ -55,7 +50,7 @@ export const Buttons = ({ control }: ButtonsProps) => {
                             )}
                         />
                         <Controller
-                            name="keyword_char_spec"
+                            name="keyword_char_species"
                             control={control}
                             render={({ field }: { field: any }) => (
                                 <InputField name="keywords" type="text" placeholder="Add Species" field={field} />
@@ -114,7 +109,7 @@ export const Buttons = ({ control }: ButtonsProps) => {
                         )}
                     />
                     <Controller
-                        name="keyword_epi_epi"
+                        name="keyword_epi_episode"
                         control={control}
                         render={({ field }: { field: any }) => (
                             <InputField name="keywords" type="text" placeholder="Add Episodes" field={field} />
@@ -128,6 +123,5 @@ export const Buttons = ({ control }: ButtonsProps) => {
                 Find
             </button>
         </div>
-            </form>
     );
 };

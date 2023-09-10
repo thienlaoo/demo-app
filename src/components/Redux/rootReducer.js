@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
 import charactersReducer from './charactersSlice';
+import { formReducer } from './formReducer';
 
 const selectedOptionReducer = (state = null, action) => {
     switch (action.type) {
@@ -10,9 +11,12 @@ const selectedOptionReducer = (state = null, action) => {
     }
 };
 
+
+
 const rootReducer = combineReducers({
     characters: charactersReducer,
-    selectedOption: selectedOptionReducer, // Добавьте новый редюсер
+    selectedOption: selectedOptionReducer,
+    formData: formReducer,
 });
 
 export default rootReducer;
