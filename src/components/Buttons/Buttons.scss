@@ -24,8 +24,9 @@
 }
 
 .buttons_find {
+  position: absolute;
   display: flex;
-  margin-left: 28px;
+  margin-left: 800px;
   width: 143px;
   height: 57px;
   padding: 0px 16px;
@@ -44,4 +45,13 @@
   letter-spacing: 0.5px;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+.control_wrapper {
+  display: flex;
+  margin-left: 378px;
+  flex-direction: column;
+  position: absolute; /* Устанавливаем абсолютное позиционирование */
+  z-index: 999; /* Устанавливаем высокий уровень z-index, чтобы элементы были поверх остального контента */
+
 }

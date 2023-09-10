@@ -1,25 +1,28 @@
 import React, { useState, useEffect } from "react";
 import "./Dropdown.scss";
+import { useDispatch } from 'react-redux';
+import { setOption } from "../Redux/actions";
 
 export const Dropdown = () => {
+    const dispatch = useDispatch();
     const [isOpen, setIsOpen] = useState(false);
-    const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
-    const options: string[] = ["Character", "Location", "Episode"];
+    const [selectedOption, setSelectedOption] = useState<string | null>(null);
+    const options: string[] = ["Character", "Location", "Episodes"];
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
     };
 
-    const handleOptionClick = (option: string) => {
-        setSelectedOptions((prevSelectedOptions) =>
-            prevSelectedOptions.includes(option)
-                ? prevSelectedOptions.filter((item) => item !== option)
-                : [...prevSelectedOptions, option]
-        );
-    };
-
     const closeDropdown = () => {
         setIsOpen(false);
+    };
+
+    const handleOptionClick = (option: string) => {
+        dispatch(setOption(option));
+
+        setSelectedOption((prevSelectedOption) => (
+            prevSelectedOption === option ? null : option
+        ));
     };
 
     useEffect(() => {
@@ -39,11 +42,9 @@ export const Dropdown = () => {
     return (
         <div className="dropdown">
             <button className="dropdown-button" onClick={toggleDropdown}>
-        <span>
-          {selectedOptions.length === 0
-              ? "Select item"
-              : selectedOptions.join(", ")}
-        </span>
+                <span>
+                    {!selectedOption ? "Select item" : selectedOption}
+                </span>
                 <span className="dropdown-icon">&#9660;</span>
             </button>
             {isOpen && (
@@ -54,10 +55,13 @@ export const Dropdown = () => {
                                 <label>
                                     <input
                                         type="checkbox"
-                                        checked={selectedOptions.includes(option)}
+                                        className="dropdown-checkbox"
+                                        checked={selectedOption === option}
                                         onChange={() => handleOptionClick(option)}
                                     />
-                                    {option}
+                                    <div className="wrapper">
+                                        {option}
+                                    </div>
                                 </label>
                             </li>
                         ))}

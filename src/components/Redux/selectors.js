@@ -1,0 +1,1 @@
+export const getSelectedOption = (state) => state.selectedOption;
