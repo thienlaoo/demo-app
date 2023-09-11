@@ -1,6 +1,7 @@
 .card {
   background-color: #3c3e44;
 
+
   border-radius: 10px;
   display: flex;
   height: 220px;
@@ -91,6 +92,8 @@
       line-height: 26px;
     }
 
+
+
     &_first {
       color: #F5F5F5;
       font-family: Roboto;
@@ -100,4 +103,8 @@
       line-height: 29.25px; /* 162.5% */
     }
   }
+}
+
+a {
+    text-decoration: none;
 }

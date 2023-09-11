@@ -4,6 +4,7 @@ import { Card } from "../Card/Card";
 import { CharData } from "../types/CharData";
 import { Filter } from "../Filter/Filter";
 import { Pagination } from "../Pagination/Pagination";
+import { More } from "../More/More";
 
 interface Props {
     chars: CharData[] | null;
@@ -12,9 +13,6 @@ interface Props {
 export const Cardlist: React.FC<Props> = ({ chars }) => {
     const [currentPage, setCurrentPage] = useState(1);
     const [perPage, setPerPage] = useState(6);
-
-
-
 
     const handlePerPage = (option: number) => {
         setPerPage(option);
@@ -27,7 +25,7 @@ export const Cardlist: React.FC<Props> = ({ chars }) => {
 
     const startIndex = (currentPage - 1) * perPage;
     const endIndex = startIndex + perPage;
-    const displayedChars = chars ? chars.slice(startIndex, endIndex) : [];
+    const displayedChars = (chars || []).slice(startIndex, endIndex);
 
     return (
         <div className="main_container">
@@ -42,10 +40,11 @@ export const Cardlist: React.FC<Props> = ({ chars }) => {
                 </div>
             </div>
             <Pagination
-                total={Math.ceil((chars?.length || 0) / perPage)} // Calculate the total pages
+                total={Math.ceil((chars?.length || 0) / perPage)}
                 currentPage={currentPage}
                 onPageChange={onPageChange}
             />
+            <More />     
         </div>
     );
 };
