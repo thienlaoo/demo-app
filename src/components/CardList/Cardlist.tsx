@@ -23,9 +23,14 @@ export const Cardlist: React.FC<Props> = ({ chars }) => {
         setCurrentPage(pageNumber);
     };
 
-    const startIndex = (currentPage - 1) * perPage;
-    const endIndex = startIndex + perPage;
-    const displayedChars = (chars || []).slice(startIndex, endIndex);
+   const displayedChars = () => {
+    if (chars) {
+        const startIndex = (currentPage - 1) * perPage;
+        const endIndex = startIndex + perPage;
+        return  chars.slice(startIndex, endIndex);
+    }
+    return [];
+   } 
 
     return (
         <div className="main_container">
@@ -33,7 +38,7 @@ export const Cardlist: React.FC<Props> = ({ chars }) => {
                 <Filter />
                 <div className="cardlist_container">
                     <div className="cardlist">
-                        {displayedChars.map((char, index) => (
+                        {displayedChars().map((char, index) => (
                             <Card key={char.id} char={char} />
                         ))}
                     </div>

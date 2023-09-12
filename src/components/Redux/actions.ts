@@ -6,7 +6,7 @@ export const setOption = (option: string | null): AnyAction => ({
     payload: option,
 });
 
-export const updateFormData = (data:FormData) => ({
+export const updateFormDataAction = (data:FormData) => ({
     type: 'UPDATE_FORM_DATA',
     payload: data,
   });
