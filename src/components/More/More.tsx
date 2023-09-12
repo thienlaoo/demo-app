@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { History } from '../History/History';
 import './More.scss';
 
 export const More = () => {
@@ -25,7 +26,10 @@ export const More = () => {
                         <div className='cardlist_alert'></div>
                     </div>
                     <div className='cardlist_download_wrapper'>
-                        <div className='cardlist_download'></div>
+                        <button
+                         className='cardlist_download'
+                         
+                         ></button>
                     </div>
 
                     <div className="cardlist_more_wrapper">

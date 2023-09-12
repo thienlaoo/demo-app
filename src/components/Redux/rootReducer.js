@@ -16,7 +16,7 @@ const selectedOptionReducer = (state = null, action) => {
 const rootReducer = combineReducers({
     characters: charactersReducer,
     selectedOption: selectedOptionReducer,
-    formData: formReducer,
+    updatedData: formReducer,
 });
 
 export default rootReducer;

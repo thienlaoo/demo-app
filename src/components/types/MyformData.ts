@@ -1,4 +1,4 @@
-export interface FormData {
+export interface MyformData {
     keywords: string;
     keyword_char_name: string;
     keyword_char_status: string;

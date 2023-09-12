@@ -41,7 +41,7 @@ export const Dropdown = () => {
 
     return (
         <div className="dropdown">
-            <button className="dropdown-button" onClick={toggleDropdown}>
+            <button className="dropdown-button" onClick={toggleDropdown} type="button">
                 <span>
                     {!selectedOption ? "Select item" : selectedOption}
                 </span>
