@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/demo-app/static/css/main.3a0905f2.css",
+    "main.js": "/demo-app/static/js/main.61a33428.js",
+    "static/media/Roboto-Light.ttf": "/demo-app/static/media/Roboto-Light.368aee5f4784ab912d2d.ttf",
+    "static/media/Roboto-Bold.ttf": "/demo-app/static/media/Roboto-Bold.c477ec326ec5faea4705.ttf",
+    "static/media/Roboto-Black.ttf": "/demo-app/static/media/Roboto-Black.79315f160c4c680ec9ec.ttf",
+    "static/media/22.jpeg.png": "/demo-app/static/media/22.jpeg.dcdd6b0316d2064c82a8.png",
+    "static/media/logo_footer.png": "/demo-app/static/media/logo_footer.ba0150bde2b088eb78ad.png",
+    "static/media/logo.svg": "/demo-app/static/media/logo.be03c4123ce323ab636d.svg",
+    "static/media/rick.svg": "/demo-app/static/media/rick.d68554309ab6c915080d.svg",
+    "static/media/morty.svg": "/demo-app/static/media/morty.f310d164d2f5c23afec5.svg",
+    "static/media/git.svg": "/demo-app/static/media/git.c14e99731e9292b59df6.svg",
+    "static/media/twi.svg": "/demo-app/static/media/twi.58b8501f85e8ffb5b85f.svg",
+    "static/media/Ellipse.svg": "/demo-app/static/media/Ellipse.f74fcbd1422cbc0b7b85.svg",
+    "static/media/more.svg": "/demo-app/static/media/more.192a3940b9b7fb59e0bc.svg",
+    "static/media/hand.svg": "/demo-app/static/media/hand.dbc0fe9fdf9721efcefd.svg",
+    "index.html": "/demo-app/index.html",
+    "static/media/like.svg": "/demo-app/static/media/like.d96e489561b7f6533d5d.svg",
+    "static/media/download.svg": "/demo-app/static/media/download.890d944f91ec2258e7d6.svg",
+    "static/media/alert.svg": "/demo-app/static/media/alert.2b60d3dba59e6049277c.svg",
+    "static/media/left.svg": "/demo-app/static/media/left.7128864e8671134d265d.svg",
+    "static/media/right.svg": "/demo-app/static/media/right.01e5f6982db76d2b9095.svg",
+    "main.3a0905f2.css.map": "/demo-app/static/css/main.3a0905f2.css.map",
+    "main.61a33428.js.map": "/demo-app/static/js/main.61a33428.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3a0905f2.css",
+    "static/js/main.61a33428.js"
+  ]
+}
